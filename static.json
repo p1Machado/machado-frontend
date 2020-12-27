@@ -4,10 +4,5 @@
     "/assets/*": "/static/",
     "/manifest.json": "manifest.json",
     "/**": "index.html"
-  },
-  "proxies": {
-    "/api/": {
-      "origin": "https://machado.herokuapp.com/"
-    }
   }
 }

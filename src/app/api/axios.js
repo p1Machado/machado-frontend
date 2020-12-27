@@ -1,5 +1,5 @@
 import Axios from "axios";
-export const baseURL = (Axios.defaults.baseURL = "/api");
+export const baseURL = (Axios.defaults.baseURL = `${process.env.REACT_APP_API_BASE_URL}/api`);
 Axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 Axios.interceptors.request.use(
   async function(config) {
