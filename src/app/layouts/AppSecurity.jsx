@@ -24,7 +24,7 @@ export function AppSecurity({ children }) {
 }
 
 function SecurityHandler({ children }) {
-  const { getAccessTokenSilently, isAuthenticated, isLoading, error } = useAuth0();
+  const { getAccessTokenSilently, loginWithRedirect, isAuthenticated, isLoading, error } = useAuth0();
 
   useEffect(() => {
     const getAccessToken = async () => {
@@ -48,6 +48,7 @@ function SecurityHandler({ children }) {
   }
 
   if (!isAuthenticated) {
+    loginWithRedirect();
     return false;
   }
 
