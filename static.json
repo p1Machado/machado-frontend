@@ -1,4 +1,5 @@
 {
+  "root": "build/",
   "proxies": {
     "/api/": {
       "origin": "https://machado.herokuapp.com/"
